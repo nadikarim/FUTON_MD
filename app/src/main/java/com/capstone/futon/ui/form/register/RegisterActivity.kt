@@ -6,11 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
-import com.capstone.futon.R
-import com.capstone.futon.data.Session
-import com.capstone.futon.databinding.ActivityLoginBinding
 import com.capstone.futon.databinding.ActivityRegisterBinding
-import com.capstone.futon.ui.MainActivity
 import com.capstone.futon.ui.form.FormViewModel
 import com.capstone.futon.ui.form.login.LoginActivity
 import com.capstone.futon.utils.DataStoreViewModel

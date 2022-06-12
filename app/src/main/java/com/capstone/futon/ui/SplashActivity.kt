@@ -9,6 +9,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
 import com.capstone.futon.R
+import com.capstone.futon.ui.main.MainActivity
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

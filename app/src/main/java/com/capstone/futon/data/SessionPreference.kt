@@ -22,7 +22,7 @@ class SessionPreference @Inject constructor(@ApplicationContext val context: Con
         return dataStore.data.map { preferences->
             Session(
                 preferences[TOKEN]?: "",
-                preferences[LOGIN_STATE]?: true
+                preferences[LOGIN_STATE]?: false
             )
         }
     }
@@ -37,7 +37,7 @@ class SessionPreference @Inject constructor(@ApplicationContext val context: Con
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences[TOKEN] = ""
-            preferences[LOGIN_STATE] = true
+            preferences[LOGIN_STATE] = false
         }
     }
 

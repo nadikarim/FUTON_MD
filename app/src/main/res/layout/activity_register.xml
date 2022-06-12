@@ -141,8 +141,9 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
+            android:textStyle="bold"
             android:text="Log In"
-            android:textColor="@color/green_sage_200" />
+            android:textColor="@color/black"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

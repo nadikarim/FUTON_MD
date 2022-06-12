@@ -30,7 +30,7 @@ object AppModule {
             .addInterceptor(loggingInterceptor)
             .build()
         return Retrofit.Builder()
-            .baseUrl("http://34.101.86.177:5000")
+            .baseUrl("http://34.101.86.177:8080")
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)

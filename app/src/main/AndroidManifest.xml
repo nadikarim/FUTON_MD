@@ -30,7 +30,7 @@
             android:name=".ui.form.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.SplashActivity"

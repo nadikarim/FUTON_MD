@@ -7,10 +7,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.futon.data.Session
 import com.capstone.futon.databinding.ActivityLoginBinding
-import com.capstone.futon.ui.MainActivity
+import com.capstone.futon.ui.main.MainActivity
 import com.capstone.futon.ui.form.FormViewModel
 import com.capstone.futon.ui.form.register.RegisterActivity
 import com.capstone.futon.utils.DataStoreViewModel
+import com.uk.tastytoasty.TastyToasty
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
 
 
+        //TastyToasty.green(this, "Selamat datang di FUTON", null).show()
         binding.btnLogin.setOnClickListener {
             val email = binding.etEmail.text.trim().toString()
             val password = binding.etPassword.text.trim().toString()
@@ -41,6 +43,9 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                 }
 
+            }
+            viewModel.toast.observe(this) {
+                TastyToasty.error(this, it).show()
             }
         }
 

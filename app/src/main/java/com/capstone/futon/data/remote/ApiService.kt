@@ -1,6 +1,7 @@
 package com.capstone.futon.data.remote
 
 import com.capstone.futon.data.model.LoginResponse
+import com.capstone.futon.data.model.Plant
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -34,6 +35,18 @@ interface ApiService {
     fun register(
         @Body response: String
     ): Call<String>
+
+
+    @GET("/api/plant/lists")
+    fun plantList(
+        @Header("auth-token")token: String
+    ): Call<List<Plant>>
+
+    @GET("/api/animal/lists")
+    fun animalList(
+        @Header("auth-token")token: String
+    ): Call<List<Plant>>
+
 
     /*
     @GET("/posts")

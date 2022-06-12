@@ -9,6 +9,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Button
 import com.capstone.futon.R
+import com.capstone.futon.ui.main.MainActivity
 
 class OnboardingActivity : AppCompatActivity() {
 
